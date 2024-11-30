@@ -1,0 +1,136 @@
+.iframeWindow:not(.searched) {
+	position: absolute;
+	width: 0vw;
+	height: 0vh;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	left: 0;
+	bottom: 0;
+	background-color: #00000000;
+}
+
+.iframeWindow.searched {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	left: 0;
+	bottom: 0;
+	background-color: #fff;
+}
+
+#urlInput {
+	position: absolute;
+	padding: 0em;
+	padding-left: 10vh;
+	margin: 0;
+	left: 0;
+	top: 0;
+	width: 70vh;
+	height: 10vh;
+	border: 0.5vh solid rgb(0, 255, 0);
+	outline: 0;
+	color: #000000;
+	-webkit-text-stroke: 0.2vh #0f0;
+	background-color: #000000;
+	font-size: 6vh;
+	border-radius: 3vh;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%, -50%);
+}
+
+.logo {
+	position: absolute;
+	top: 40vh;
+	left: 50vw;
+	transform: translate(-50%, -50%);
+	color: rgb(172, 255, 172);
+	text-shadow: #0f0 0 0 1.5vh;
+	font-size: 5vh;
+	width: 90vw;
+	text-align: center;
+	font-weight: bold;
+}
+
+.logo .svg {
+	width: 5vh;
+	height: 5vh;
+}
+
+#urlInput::placeholder {
+	color: #000;
+}
+
+#searchButton {
+	position: absolute;
+	margin: 0;
+	top: 52vh;
+	left: 50vw;
+	transform: translate(calc(-50% - 14vh), -50%);
+	scale: 2;
+	border: 0;
+	outline: 0;
+	color: #0f0;
+	font-size: 5vh;
+	background-color: transparent;
+}
+
+.bg {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color: #000000;
+	z-index: -1;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	border: unset;
+	margin: unset;
+	padding: unset;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+	position: absolute;
+	top: 5vh;
+	left: -5vh;
+	width: 10vh;
+	height: 15vh;
+	background-color: #0f0;
+	border-radius: 5vh;
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	z-index: 50;
+}
+
+nav a {
+	position: relative;
+	top: 40%;
+	transform: translate(5vh, calc(-50% - 5vh));
+	left: 5%;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+	text-decoration: unset;
+	color: unset;
+}
+
+nav a svg {
+	width: 3vh;
+	height: 3vh;
+}
+
+nav a:nth-child(1) {
+	transform: translate(5vh, calc(-50% + 5vh));
+}

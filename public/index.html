@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="/uv/uv.bundle.js"></script>
+		<script src="/uv/uv.config.js"></script>
+
+		<script>
+			if ('serviceWorker' in navigator) {
+				window.addEventListener('load', () => {
+					navigator.serviceWorker.register('/uv/sw.js', {
+						scope: __uv$config.prefix
+					});
+				});
+			}
+		</script>
+
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<nav>
+			<a href="/">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="lucide lucide-house"
+				>
+					<path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+					<path
+						d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+					/>
+				</svg>
+			</a>
+			<a href="/g">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="lucide lucide-gamepad-2"
+				>
+					<line x1="6" x2="10" y1="11" y2="11" />
+					<line x1="8" x2="8" y1="9" y2="13" />
+					<line x1="15" x2="15.01" y1="12" y2="12" />
+					<line x1="18" x2="18.01" y1="10" y2="10" />
+					<path
+						d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"
+					/>
+				</svg>
+			</a>
+		</nav>
+		<input type="text" id="urlInput" placeholder="Search..." />
+
+		<button id="searchButton">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="3vh"
+				height="3vh"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				class="lucide lucide-search"
+			>
+				<circle cx="11" cy="11" r="8" />
+				<path d="m21 21-4.3-4.3" />
+			</svg>
+		</button>
+
+		<div class="logo">
+			ACCESS UNBLOCKER<svg
+				fill="#0f0"
+				height="5vh"
+				width="5vh"
+				version="1.1"
+				id="Layer_1"
+				xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink"
+				viewBox="0 0 330 330"
+				xml:space="preserve"
+			>
+				<g id="XMLID_509_">
+					<path
+						id="XMLID_510_"
+						d="M65,330h200c8.284,0,15-6.716,15-15V145c0-8.284-6.716-15-15-15h-15V85c0-46.869-38.131-85-85-85
+		S80,38.131,80,85v45H65c-8.284,0-15,6.716-15,15v170C50,323.284,56.716,330,65,330z M180,234.986V255c0,8.284-6.716,15-15,15
+		s-15-6.716-15-15v-20.014c-6.068-4.565-10-11.824-10-19.986c0-13.785,11.215-25,25-25s25,11.215,25,25
+		C190,223.162,186.068,230.421,180,234.986z M110,85c0-30.327,24.673-55,55-55s55,24.673,55,55v45H110V85z"
+					/>
+				</g>
+			</svg>
+		</div>
+
+		<iframe id="iframeWindow" class="iframeWindow"></iframe>
+
+		<img src="/bg.svg" alt="" class="bg" />
+	</body>
+	<script src="script.js"></script>
+</html>
